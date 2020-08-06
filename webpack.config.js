@@ -1,3 +1,4 @@
+const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -18,32 +19,42 @@ module.exports = {
     hot: true,
     historyApiFallback: true,
   },
+  resolve: {
+    plugins: [
+      PnpWebpackPlugin,
+    ],
+  },
+  resolveLoader: {
+    plugins: [
+      PnpWebpackPlugin.moduleLoader(module)
+    ]
+  },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [{ loader: 'babel-loader' }, { loader: 'eslint-loader' }],
+        use: [{ loader: require.resolve('babel-loader') }, { loader: require.resolve('eslint-loader') }],
       },
       {
         test: /\.s?css/,
         use: [
           finalCSSLoader,
           {
-            loader: 'css-loader',
+            loader: require.resolve('css-loader'),
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: 'postcss-loader',
+            loader: require.resolve('postcss-loader'),
             options: {
               plugins: () => [autoprefixer()],
               sourceMap: true,
             },
           },
           {
-            loader: 'sass-loader',
+            loader: require.resolve('sass-loader'),
             options: {
               sourceMap: true,
             },
@@ -54,7 +65,7 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: require.resolve('file-loader'),
             options: {
               useRelativePath: true,
               name: '[name].[ext]',

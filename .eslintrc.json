@@ -73,8 +73,8 @@
   ],
   "parserOptions": {
     "ecmaFeatures": {
-      "jsx": true,
-      "sourceType": "module"
-    }
+      "jsx": true
+    },
+    "sourceType": "module"
   }
 }
