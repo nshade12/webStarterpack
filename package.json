@@ -1,57 +1,37 @@
 {
   "name": "webstarterpack",
-  "version": "1.0.0",
-  "description": "frameworking for making websites and webapps",
-  "main": "src/index.js",
-  "author": "Nicholas Shade",
+  "version": "5.0.0",
+  "description": "Template for making websites and webapps",
+  "homepage": "https://github.com/nshade12/webStarterpack#readme",
+  "bugs": {
+    "url": "https://github.com/nshade12/webStarterpack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nshade12/webStarterpack.git"
+  },
   "license": "MIT",
-  "repository": "https://github.com/nshade12/webStarterpack.git",
-  "private": true,
+  "author": "Nicholas Shade",
+  "type": "commonjs",
+  "main": "src/index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server",
-    "test": "eslint src/**.js",
-    "build": "yarn clean; NODE_ENV=production webpack --colors",
-    "clean": "rimraf dist",
-    "deploy": "yarn build; surge -p dist -d shade-cs52-starter.surge.sh; yarn clean"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@babel/core": "^7.27.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.27.2",
-    "@babel/preset-react": "^7.27.1",
     "autoprefixer": "^10.4.21",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^10.0.0",
-    "css-loader": "^7.1.2",
-    "eslint": "^9.29.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-loader": "^4.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.3",
-    "mini-css-extract-plugin": "^2.9.2",
-    "node-sass": "^9.0.0",
-    "postcss-loader": "^8.1.1",
-    "sass-loader": "^16.0.5",
-    "style-loader": "^4.0.0",
-    "surge": "^0.24.6",
-    "webpack": "^5.99.9",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "sass": "^1.89.2",
+    "vite": "^6.3.5",
+    "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
-    "axios": "^1.10.0",
-    "jquery": "^3.5.0",
-    "lodash.debounce": "^4.0.8",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-redux": "^9.2.0",
-    "react-router": "^7.6.2",
-    "react-router-dom": "^7.6.2",
-    "redux": "^5.0.1",
-    "redux-thunk": "^3.1.0"
+    "jquery": "^3.7.1"
   }
 }
