@@ -1,9 +1,11 @@
 {
   "extends": "airbnb",
-  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2023
   },
   "rules": {
     "strict": 0,
@@ -67,14 +69,9 @@
     "jsx-a11y/click-events-have-key-events": 0,
     "jsx-a11y/no-noninteractive-element-interactions": 0,
     "react/jsx-one-expression-per-line": 0
-  },
-  "plugins": [
-    "react"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true,
-      "sourceType": "module"
-    }
   }
+  // "plugins": [
+  //   "react"
+  // ],
+
 }
