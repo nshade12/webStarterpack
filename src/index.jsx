@@ -1,15 +1,15 @@
-import $ from 'jquery';
+// This is the entry point for our React application.
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import './style.scss';
 
-let num = 0;
+function App() {
+  return <div className="test">Hello World!</div>;
+}
 
-setInterval(() => {
-  $('#main').html(`<h1>You've been on this page for ${num} seconds.</h1>`);
-  num += 1;
-}, 1000);
+const root = createRoot(document.getElementById('main'));
+root.render(<App />);
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
 // import { Provider } from 'react-redux';
 // import { createStore, applyMiddleware, compose } from 'redux';
 
