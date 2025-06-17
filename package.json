@@ -1,6 +1,6 @@
 {
   "name": "webstarterpack",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "description": "Template for making websites and webapps",
   "homepage": "https://github.com/nshade12/webStarterpack#readme",
   "bugs": {
@@ -34,9 +34,11 @@
   "dependencies": {
     "@vitejs/plugin-react": "^4.5.2",
     "axios": "^1.10.0",
+    "immer": "^10.1.1",
     "lodash.debounce": "^4.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.2"
+    "react-router": "^7.6.2",
+    "zustand": "^5.0.5"
   }
 }
